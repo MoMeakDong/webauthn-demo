@@ -5,6 +5,7 @@ const database = require('./db');
 
 /* Returns if user is logged in */
 router.get('/isLoggedIn', (request, response) => {
+    console.log(2222222,request.session)
     if(!request.session.loggedIn) {
         response.json({
             'status': 'failed'
@@ -28,6 +29,7 @@ router.get('/logout', (request, response) => {
 
 /* Returns personal info and THE SECRET INFORMATION */
 router.get('/personalInfo', (request, response) => {
+    console.log(request.session.loggedIn, 333)
     if(!request.session.loggedIn) {
         response.json({
             'status': 'failed',

@@ -11,7 +11,7 @@ const iso_3166_1    = require('iso-3166-1');
 const config        = require('./config.json');
 const defaultroutes = require('./routes/default');
 const passwordauth  = require('./routes/password');
-const webuathnauth  = require('./routes/webauthn.js');
+const webuathnauth  = require('./routes/webauthn');
 
 const app           = express();
 
